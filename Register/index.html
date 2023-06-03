@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Form || Syed Tariq Ahmed</title>
+  <link rel="stylesheet" href="style.css">
+ 
+  <link rel="stylesheet" hr ef="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+   <div class="nav">
+     <div class="logo">
+       <h1>
+         Syed Tarique Ahmed<i class="fa-solid fa-bars" onclick="toggleinMenu()"></i>
+       </h1>
+     </div>
+     <div class="menu" id="menu">
+       <div class="nav-links">
+         <ul>
+           <li><a href="#home">HOME</a></li>
+           <li><a href="#course">COURSES</a></li>
+           <li><a href="#teacher">ABOUT US</a></li>
+           <li><a href="#pricing">PRICING</a></li>
+         </ul>
+       </div>
+       <div class="buttons">
+         <a href="../Register/register.html">Admisson</a>
+       </div>
+       <div class="user">
+         <div id="image">
+           <img src="./images/user.png" onclick="toggleMenu()" alt="">
+         </div>
+       </div>
+       <div class="sub-menu-wrap" id="sub">
+         <div class="sub-menu">
+           <div class="user-info">
+             <div id="innerimage">
+               <img src="./images/user.png" onclick="toggleMenu()" alt="">
+             </div>
+             <p id="username"></p>
+           </div>
+           <hr />
+           <a href="/Profile" class="sub-menu-links">
+             <img src="./images/profile.png" alt="profile">
+             <p>Edit Profile</p>
+             <span>></span>
+           </a>
+           <a href="#" class="sub-menu-links" onclick="logout()">
+             <img src="./images/logout.png" alt="profile">
+             <p>Logout</p>
+             <span>></span>
+           </a>
+           <a href="/Home" class="sub-menu-links">
+             <img src="./images/logout.png" alt="profile">
+             <p>Go Back</p>
+             <span>></span>
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+  <div class="signup-card-container">
+    <div class="signup-card">
+      <div class="signup-card-logo">
+        <!-- <img src="./logo.png" alt="logo"> -->
+      </div>
+      <div class="signup-card-header">
+        <h1>Admission Form</h1>
+      </div>
+      <form class="signup-card-form form">
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">person</span>
+          <input type="text" id="username" placeholder="Enter Your Name" autofocus>
+        </div>
+
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">email</span>
+          <input type="email" id="email" placeholder="Enter Your Email">
+        </div>
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">person</span>
+          <input type="number" id="age" placeholder="Enter Your Age">
+        </div>
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">phone</span>
+          <input type="number" id="phone" placeholder="Enter Contact Number">
+        </div>
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">location_on</span>
+          <input type="text" id="adress" placeholder="Enter Your Adress">
+        </div>
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">volunteer_activism</span>
+          <input type="text" id="nation" placeholder="Enter Your Nationality">
+        </div>
+        <div class="form-item">
+          <span class=" form-item-icon material-symbols-outlined">home</span>
+          <input type="text" id="placeofbirth" placeholder="Enter PLace Of Birth">
+        </div>
+        <div class="select-goup">
+
+          <div class="div">
+            <button class="button" id="button">
+              <span id="select-label">Select</span>
+              <div class="arrow"></div>
+            </button>
+          </div>
+          <div class="dropdown hidden" id="dropdow">
+            <label for="Basic-Level" class="select-item">Basic Level</label>
+            <input type="radio" name="where" id="Basic-Level" class="option" value="Basic-Level">
+            <label for="Mid-Level" class="select-item">Mid Level</label>
+            <input type="radio" name="where" id="Mid-Level" class="option" value="Mid-Level">
+            <label for="Advance-Level" class="select-item">Advance Level</label>
+            <input type="radio" name="where" id="Advance-Level" class="option" value="Advance-Level">
+            <label for="IELTS-Course" class="select-item">IELTS-Course</label>
+            <input type="radio" name="where" id="IELTS-Course" class="option" value="IELTS-Course">
+            <label for="TEOFEL-Course" class="select-item">TOEFL-Course</label>
+            <input type="radio" name="where" id="TEOFEL-Course" class="option" value="TEOFEL-Course">
+          </div>
+        </div>
+
+        <button onclick="return admit()" class="admission-button">Admit Form</button>
+      </form>
+    </div>
+    <img src="./images/register.svg" alt="">
+  </div>
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icons">
+      <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href="https://www.facebook.com"><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href="https://www.facebook.com"><i class="fa-brands fa-twitter"></i></a></li>
+      <li><a href="https://www.facebook.com"><i class="fa-brands fa-linkedin"></i></a></li>
+    </ul>
+    <ul class="footer-menu">
+      <li><a href="">HOME</a></li>
+      <li><a href="">COURSES</a></li>
+      <li><a href="">PRICING</a></li>
+      <li><a href="">TEACHERS</a></li>
+    </ul>
+    <p>&copy; 2023 SyedTariqAhmed | All Right Reserved</p>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
